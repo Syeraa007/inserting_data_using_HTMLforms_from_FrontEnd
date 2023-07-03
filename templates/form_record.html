@@ -11,16 +11,6 @@
         <div>
             <form action="" method="POST">
                 {% csrf_token %}
-<!--                 
-                <label for="topic">Topic Name : </label>
-                <select name="topic" id="topic">
-                    <option value="select">--select--</option>
-                    {% for to in LTO %}
-                    <option value="{{to}}">{{to.topic_name}}</option>
-                    {% endfor %}
-                </select>
-                <br>
-                <br> -->
                 <label for="names">Name : </label>
                 <select name="names" id="names">
                     <option value="select">--select--</option>
