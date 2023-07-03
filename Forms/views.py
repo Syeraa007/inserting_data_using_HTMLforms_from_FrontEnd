@@ -42,3 +42,18 @@ def form_record(request):
         AccessRecord.objects.get_or_create(name=NO,date=Date,author=Author)[0].save()
         return HttpResponse('Record added successfully')
     return render(request,'form_record.html',d)
+
+def retrieve_webpage(request):
+    LTO=Topic.objects.all()
+    d={'LTO':LTO}
+    if request.method=='POST':
+        MST=request.POST.getlist('topic')
+        WEQS=Webpage.objects.none()
+        for wo in MST:
+            WEQS=WEQS|Webpage.objects.filter(topic_name=wo)
+        d1={'WEQS':WEQS}
+        return render(request,'webpage_result.html',d1)
+    return render(request,'retrieve_webpage.html',d)
+
+def webpage_result(request):
+    return render(request,'webpage_result.html')

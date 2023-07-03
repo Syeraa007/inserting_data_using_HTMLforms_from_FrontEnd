@@ -24,4 +24,6 @@ urlpatterns = [
     path('form_topic/',form_topic,name='form_topic'),
     path('form_webpage/',form_webpage,name='form_webpage'),
     path('form_record/',form_record,name='form_record'),
+    path('retrieve_webpage/',retrieve_webpage,name='retrieve_webpage'),
+    path('webpage_result/',webpage_result,name='webpage_result'),
 ]
