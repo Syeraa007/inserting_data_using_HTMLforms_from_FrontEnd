@@ -7,7 +7,7 @@
 </head>
 <body>
     <center>
-        <h1>Checkbox with ACtion attribute</h1>
+        <!-- <h1>Checkbox with ACtion attribute</h1>
         <form action="{% url 'retrieve_webpage' %}" method="POST">
             {% csrf_token %}
             {% for to in LTO %}
@@ -15,7 +15,18 @@
             <input type="checkbox" name="topic" id="topic" value="{{to}}"><br><br>
             {% endfor %}
             <input type="submit" value="Submit checkboxes">
+        </form> -->
+
+        <h1>Radio buttons with ACtion attribute</h1>
+        <form action="{% url 'retrieve_webpage' %}" method="POST">
+            {% csrf_token %}
+            {% for to in LTO %}
+            <label for="topic">{{to.topic_name}}</label>
+            <input type="radio" name="topic" id="topic" value="{{to}}"><br>
+            {% endfor %}
+            <input type="submit" value="Submit radio">
         </form>
+        
     </center>
 </body>
 </html>

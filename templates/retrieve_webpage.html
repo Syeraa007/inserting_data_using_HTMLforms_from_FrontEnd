@@ -7,7 +7,7 @@
 </head>
 <body>
     <center>
-        <h1>Retrieving webpage content</h1>
+        <h1>Retrieving webpage content </h1>
         <form action="" method="POST">
             {% csrf_token %}
             <label for="topic">Topic Name</label>
@@ -18,6 +18,17 @@
             </select><br><br>
             <input type="submit" value="retrieve_webpage">
         </form>
+        
+        <!-- <h1>Retrieving webpage content </h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="topic">Topic Name</label><br>
+            {% for to in LTO %}
+                <input type="radio" name="topic" id="topic">{{to.topic_name}}
+                <br><br>
+            {% endfor %}
+            <input type="submit" value="retrieve_webpage">
+        </form> -->
     </center>
 </body>
 </html>
