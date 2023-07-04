@@ -26,4 +26,6 @@ urlpatterns = [
     path('form_record/',form_record,name='form_record'),
     path('retrieve_webpage/',retrieve_webpage,name='retrieve_webpage'),
     path('webpage_result/',webpage_result,name='webpage_result'),
+    path('checkbox/',checkbox,name='checkbox'),
+
 ]
